@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav_link {
+  color: black;
+  font-size: 30px;
+  margin: 0 20px;
+}
+
+.nav_link:hover{
+    cursor: pointer;
+    color: blue;
+}

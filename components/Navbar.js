@@ -2,10 +2,8 @@ function GenNavbar(linksArray) {
   const nav = document.createElement("nav");
   linksArray.forEach((link) => {
     const a = document.createElement("a");
+    a.className = "nav_link";
     a.textContent = link;
-    a.style.color = "blue";
-    a.style.fontSize = "50px";
-    a.style.margin = "0 20px";
 
     a.addEventListener("click", (e) => {
       e.preventDefault();
@@ -19,6 +17,6 @@ function GenNavbar(linksArray) {
 
     nav.appendChild(a);
   });
-  nav.style.display = "inline-block";
+
   return nav;
 }
