@@ -4,6 +4,7 @@ const pages = ["news", "create story"];
 
 root.appendChild(GenNavbar(pages));
 root.appendChild(main);
+loadPage();
 
 async function loadNews() {
   const localStorage = window.localStorage;
@@ -48,14 +49,16 @@ async function loadPage(pageName = "news") {
     case "news":
       page = loadNewsToWindow(news);
       main.appendChild(page);
+      document.title = "News";
       break;
     case "create story":
       page = CreateStory();
       main.appendChild(page);
       break;
     default:
-      //   page = News();
-      //   main.appendChild(page);
+      page = loadNewsToWindow(news);
+      main.appendChild(page);
+      document.title = "News";
       break;
   }
 }
