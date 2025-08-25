@@ -1,0 +1,36 @@
+.news_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 15px;
+  background-color: cadetblue;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.news_card {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  font-size: 0.8rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: antiquewhite;
+}
+
+.news_title {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.news_author {
+  font-size: 0.7rem;
+  margin-bottom: 4px;
+}
+
+.news_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 4px;
+}
