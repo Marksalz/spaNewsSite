@@ -9,7 +9,7 @@ loadPage();
 async function loadNews() {
   const localStorage = window.localStorage;
   let news = null;
-  console.log(`local storage: `, localStorage);
+  // console.log(`local storage: `, localStorage);
   if (localStorage.length === 0) {
     try {
       const response = await fetch(
@@ -23,7 +23,7 @@ async function loadNews() {
       );
       const newsFromApi = await response.json();
       news = newsFromApi;
-      console.log(`News:`, newsFromApi);
+      // console.log(`News:`, newsFromApi);
       localStorage.setItem("news", JSON.stringify(newsFromApi));
     } catch (error) {
       console.error("Failed to fetch news:", error);
@@ -54,6 +54,7 @@ async function loadPage(pageName = "news") {
     case "create story":
       page = CreateStory();
       main.appendChild(page);
+      document.title = "Create story";
       break;
     default:
       page = loadNewsToWindow(news);

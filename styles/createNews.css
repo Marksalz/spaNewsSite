@@ -1,0 +1,54 @@
+.news_form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px;
+  background-color: antiquewhite;
+  margin: 8px auto 8px auto;
+  border-radius: 8px;
+  width: 45%;
+}
+
+#title_input {
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+#author_input {
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+#image_input {
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+#content_text_area {
+  height: 100px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.submit_news_btn {
+  height: 30px;
+  width: 20%;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.submit_news_btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.submit_news_btn:active {
+  background-color: darkgray;
+}
