@@ -19,9 +19,16 @@ function loadNewsToWindow(news) {
     const news_img = newsComponent.getElementsByClassName("news_img")[0];
     news_img.src = article.urlToImage;
 
+    newsComponent.addEventListener("click", (e) => {
+      console.log(`clicked`);
+      const main = document.querySelector("main");
+      main.innerHTML = "";
+      const newsArticle = LoadArticle(article);
+      main.appendChild(newsArticle);
+      document.title = article.title;
+    });
+
     newsContainer.appendChild(newsComponent);
   }
-  console.log(`news container:`, newsContainer);
-
   return newsContainer;
 }
