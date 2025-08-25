@@ -13,6 +13,14 @@ function BuildCreateNewsForm() {
   titleInput.name = "title";
   titleInput.required = true;
 
+  const authorLabel = document.createElement("label");
+  authorLabel.textContent = "Author:";
+  const authorInput = document.createElement("input");
+  authorInput.id = "author_input";
+  authorInput.type = "text";
+  authorInput.name = "author";
+  authorInput.required = true;
+
   const imageLabel = document.createElement("label");
   imageLabel.textContent = "Image URL:";
   const imageInput = document.createElement("input");
@@ -35,6 +43,9 @@ function BuildCreateNewsForm() {
 
   newsForm.appendChild(titleLabel);
   newsForm.appendChild(titleInput);
+
+  newsForm.appendChild(authorLabel);
+  newsForm.appendChild(authorInput);
 
   newsForm.appendChild(imageLabel);
   newsForm.appendChild(imageInput);
