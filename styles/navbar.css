@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: cadetblue;
+  border-radius: 8px;
+}
+
+.nav_link {
+  color: black;
+  background-color: antiquewhite;
+  font-size: 30px;
+  margin: 15px;
+  padding: 4px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.nav_link:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.nav_link:active {
+  background-color: darkgray;
+}
